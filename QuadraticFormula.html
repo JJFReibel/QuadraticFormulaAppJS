@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: black;
+  color: green;
+  font-weight: 900;
+}
+</style>
+</head>
+<body>
+<p>Enter the values for the quadratic formula:</p>
+  A:  <input type="text" name="aVal"><br>
+  B:  <input type="text" name="bVal"><br>
+  C:  <input type="text" name="cVal"><br><br>
+<button onclick="quadratic()">Calculate</button>
+<script>
+function quadratic() {
+	var varA = parseFloat(document.getElementsByName("aVal")[0].value);
+	var varB = parseFloat(document.getElementsByName("bVal")[0].value);
+	var varC = parseFloat(document.getElementsByName("cVal")[0].value);
+	if((varB^2 - 4*varA*varC) < 0){
+        alert("Values are: NaN");
+    }
+    else{
+    	var varD = (-varB+((varB**2 - 4*varA*varC)**(1/2))) / (2*varA);
+        var varE = (-varB-((varB**2 - 4*varA*varC)**(1/2))) / (2*varA);
+        alert("Values are: " + varD + ", " + varE);
+    }
+}
+</script>
+<br><br><br>Quadratic Formula App by JJ F. Reibel
+</body>
+</html>
