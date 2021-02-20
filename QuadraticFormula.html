@@ -20,8 +20,8 @@ function quadratic() {
 	var varA = parseFloat(document.getElementsByName("aVal")[0].value);
 	var varB = parseFloat(document.getElementsByName("bVal")[0].value);
 	var varC = parseFloat(document.getElementsByName("cVal")[0].value);
-	if((varB^2 - 4*varA*varC) < 0){
-        alert("Values are: NaN");
+	if((varB**2 - 4*varA*varC) < 0){
+        	alert("Values are: NaN");
     }
     else{
     	var varD = (-varB+((varB**2 - 4*varA*varC)**(1/2))) / (2*varA);
